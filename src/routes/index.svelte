@@ -39,10 +39,12 @@
   <div id="main">
     <div class="text">
       <h6>{leagueName}</h6>
-      <a href="/drafts" class="myLinks">Drafts</a>
-      <a href="/records" class="myLinks">Records</a>
       <!-- homepageText contains the intro text for your league, this gets edited in /src/lib/utils/leagueInfo.js -->
       {@html homepageText}
+      <div class="linksCont">
+        <a href="/drafts" class="myLinks">Drafts</a>
+        <a href="/records" class="myLinks">Records</a>
+      </div>
       <!-- Most recent Blog Post (if enabled) -->
       {#if enableBlog}
         <HomePost />
@@ -133,19 +135,30 @@
   }
 
   .myLinks {
+    max-width: 300px;
+    width: 100%;
     margin: 1rem;
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 0;
     background-color: var(--blueOne);
     color: var(--g000);
     text-decoration: none;
     font-size: 2rem;
     border-radius: 6px;
     box-shadow: none;
+    text-shadow: none;
     transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .myLinks:hover {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 12px -1px rgba(255, 255, 255, 0.4);
+  }
+
+  .linksCont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .text {
@@ -177,6 +190,10 @@
     }
     #home {
       flex-wrap: wrap;
+    }
+
+    .linksCont {
+      flex-direction: column;
     }
   }
 
