@@ -39,6 +39,8 @@
   <div id="main">
     <div class="text">
       <h6>{leagueName}</h6>
+      <a href="/drafts" class="myLinks">Drafts</a>
+      <a href="/records" class="myLinks">Records</a>
       <!-- homepageText contains the intro text for your league, this gets edited in /src/lib/utils/leagueInfo.js -->
       {@html homepageText}
       <!-- Most recent Blog Post (if enabled) -->
@@ -128,6 +130,22 @@
     min-width: 320px;
     margin: 0 auto;
     padding: 60px 0;
+  }
+
+  .myLinks {
+    margin: 0 8px;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--blueOne);
+    color: var(--g000);
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .myLinks:hover {
+    box-shadow: 0 0 12px -1px rgba(255, 255, 255, 0.4);
   }
 
   .text {
