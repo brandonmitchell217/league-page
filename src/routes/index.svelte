@@ -139,8 +139,8 @@
     width: 100%;
     margin: 1rem;
     padding: 1rem 0;
-    background-color: var(--blueOne);
-    color: var(--g000);
+    background-color: var(--g000);
+    color: var(--fff);
     text-decoration: none;
     font-size: 2rem;
     border-radius: 6px;

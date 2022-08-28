@@ -84,6 +84,7 @@
     display: block;
     margin: 0 auto;
     padding: 5px;
+    filter: drop-shadow(0 1px 3px var(--g000));
   }
 
   .large {
