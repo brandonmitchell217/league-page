@@ -133,7 +133,7 @@
   }
 
   .myLinks {
-    margin: 0 8px;
+    margin: 1rem;
     padding: 0.5rem 1.5rem;
     background-color: var(--blueOne);
     color: var(--g000);
